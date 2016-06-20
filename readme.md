@@ -667,4 +667,4 @@ Don't be frustrated by all the new commands because we will definitely have the 
 - How do you merge & delete a branch?
 
 ## Associated Lab
-Refine the skills covered in this workshop with this [lab](https://github.com/awhit012/gh-lab/blob/master/readme.md)
+Refine the skills covered in this workshop with this [lab](https://github.com/den-wdi-1/gh-lab/blob/master/readme.md)

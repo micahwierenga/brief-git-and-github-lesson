@@ -668,3 +668,7 @@ Don't be frustrated by all the new commands because we will definitely have the 
 
 ## Associated Lab
 Refine the skills covered in this workshop with this [lab](https://github.com/den-wdi-1/gh-lab/blob/master/readme.md)
+
+## Licensing
+All content is licensed under a CC­BY­NC­SA 4.0 license.
+All software code is licensed under GNU GPLv3. For commercial use or alternative licensing, please contact legal@ga.co.

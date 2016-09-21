@@ -120,32 +120,6 @@ $ git help -a
 
 Even though there are lots of commands, on the course we will really only need about 10.
 
-
-#### Git File Lifecycle
-
-To understand how Git works, we need to talk about the lifecycle of a Git-tracked file.
-
-<figure>
-  <img src="https://cloud.githubusercontent.com/assets/40461/8226866/62730b4c-159a-11e5-89cd-20b72ed1de45.png" alt="Git lifecycle">
-  <br>
-  <figcaption>Git lifecycle</figcaption>
-</figure>
-
-Schema From [git-scm.com](https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository)
-
-There are 4 main stages of Git version controlled file:
-
-1. **Untracked**: The file will not be added in the next commit
-2. **Staged**: Staged files have not yet been committed to memory but they are "on deck" so to speak for your next commit
-3. **Unmodified**: The file has already been committed and has not changed since the last commit
-4. **Modified**: You have changes in the file since it was last committed, you will need to stage them again for the changes to be added in the next commit
-
-Once you have committed a file and it becomes "unmodified" then it's contents are saved in Git's memory.
-
-- **Not saved in git memory**: Your file is not saved until you commit the file to Git's memory
-- **Saved in git memory**: Only once you have committed a file, it becomes saved in Git's memory
-
-
 ## Let's use Git
 
 First, create a directory on your Desktop:
@@ -599,21 +573,6 @@ Team up with the person next to you, and go through the following commands we've
 - git merge
 
 Based on what we've talked about, and before you jump into your terminal, discuss the correct commands you would have to use - and the correct order you would need to use them in - to repeat the process of creating a readme. Be aware of the "why" and that you may have to use some commands more than once.
-
-## Branch, Push, Merge, Repeat - Independent Practice
-
-Time for you to try it. With your partner, walk through the steps necessary together, catching each other if either makes any missteps.
-
-Start by mimicking our example – create a branch to write another readme.
-
-- `git init`
-- `git add` & `git commit`
-- Create a new branch for the feature you're about to work on
-- Switch to that branch
-- Write some code
-- `git merge` that branch back into your `master`
-
-Once you've got it down, do the same process again for a bug fix (aka a typo), so you get in the habit of creating branches whenever you need to make changes.
 
 ## Create a pull request on GitHub - Codealong
 

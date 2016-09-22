@@ -1,5 +1,6 @@
 <!--
 Market: SF
+Adapted for: DEN
 -->
 
 ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png)
@@ -16,9 +17,10 @@ Market: SF
 ## What are the objectives?
 *After this lesson, students will be able to:*
 
+- Fork, clone, and make pull requests to repositories
 - Create, merge and delete branches on local and remote repositories
+- Use git, GitHub and branches to collaborate with other developers
 - Deploy a project to Github Pages
-- Describe how branching and merging allows for collaboration during development
 
 ## Where should we be now?
 *Before this lesson, students should already be able to:*
@@ -31,84 +33,22 @@ Market: SF
 ## Review: Git vs GitHub and Version Control
 <details>
   <summary>What is the difference between Git and GitHub?</summary>
-  <p>Git is a software version control tool that works on your local machine. It allows you to `init`, `add`, `commit`, and `fork` project 'repos'. It also has methods `push`, `pull`, and `fetch` which are designed to interact with a cloud based service like GitHub.
+  <p>Git is a software version control tool that works on your local machine. It allows you to `init`, `add`, `commit`, and `fork` project 'repos'. It also has methods `push`, `pull`, and `fetch` which are designed to interact with a git server or cloud based service like GitHub.
   <br>
-  Github is a cloud based repository, collaboration tool, and social network which uses Git under the hood for its version control system.
+  Github is a cloud based git server and social network which uses Git under the hood for its version control system.
   </p>
 </details>
 
 
 ### What is version control? A closer look:
 
-Version control is a kind of software used to record and re-use changes (or versions) on files so that an history of the file content can be reviewed.
+Version control is a kind of software used to track changes to files so that a comprehensive history of the file content can be reviewed.
 
 There are two main types of version control:
 
-- Centralized
-- Distributed
-
-#### Centralized Version Control
-<figure>
-  <img src="http://s17.postimg.org/3s9fr8zxr/figure1.png" alt="CVCs">
-  <br>
-  <figcaption>Centralized version control (CVCs) has one central repository that is shared among all team members.</figcaption>
-</figure>
-
-Schema from [IBM Developer works](http://www.ibm.com/developerworks/library/d-app-centric-ops/)
-
-
-The main concept of a centralized system is that it works in a client and server relationship. The repository is located in one place and provides access to many clients. It’s very similar to FTP in where you have an FTP client which connects to an FTP server. All changes, users, versions of your project and information must be sent and received from this central repository.
-
-The primary benefits of a Centralized Version Control is:
-
-- It is easy to understand
-- You have more control over users and access (since it is served from one place)
-- Simple to get started
-
-At the same time, Centralized Version Control has some drawbacks:
-
-- Dependent on access to the server (requires internet connection)
-- Hard to manage a server and backups
-- It can be slower because every command connects to the server
-- Branching and merging tools are difficult to use
-
-Popular centralized version control systems (CVCSes) include:
-
-- [Subversion](http://subversion.apache.org/)
-- CVS
-
-#### Distributed Version Control
-
-Distributed version control systems are a newer option. In distributed version control, each user has their own copy of the entire repository, not just the files but the history as well. Think of it as a network of individual repositories.  
-
-<figure>
-  <img src="http://s17.postimg.org/3tjdko1rj/figure2.png" alt="DVC">
-  <br>
-  <figcaption>Distributed Version Control</figcaption>
-</figure>
-
-
-Schema from [IBM Developer works](http://www.ibm.com/developerworks/library/d-app-centric-ops/)
-
-The primary benefits of a Distributed Version Control is:
-
-- More powerful and detailed change tracking, which means less conflicts
-- No server necessary – all actions except sharing repositories are local (commit offline)
-- Branching and merging is more reliable, and therefore used more often
-- It’s fast
-
-At the same time, Distributed Version Control do have some drawbacks:
-
-- The distributed model is harder to understand
-- The revisions are not incremental numbers, which make them harder to reference
-- It can be easier to make mistakes until you are familiar with the model
-
-Popular distributed version control systems include:
-
-- [Git](http://git-scm.com/)
-- [mercurial](http://www.selenic.com/mercurial/wiki/index.cgi/ProjectsUsingMercurial)
-- [bzr](http://wiki.bazaar.canonical.com/WhoUsesBzr)
-- [fossil](http://www.fossil-scm.org/)
+- Centralized: All changes are kept on a single server
+- Distributed: Changes can be tracked on individual computers, and synched using the cloud
+- Git and GitHub together form a distributed version control system
 
 #### So many commands?!
 
@@ -118,7 +58,32 @@ There are also a lot of commands you can use in git. You can take a look at a li
 $ git help -a
 ```
 
-Even though there are lots of commands, on the course we will really only need about 10.
+Even though there are lots of commands, in this course we will really only need about 10.
+
+#### Git File Lifecycle
+
+To understand how Git works, we need to talk about the lifecycle of a Git-tracked file.
+
+<figure>
+  <img src="http://image.slidesharecdn.com/git-getreadytouseit-140228043813-phpapp02/95/git-get-ready-to-use-it-13-638.jpg?cb=1393562489" alt="Git lifecycle">
+  <br>
+  <figcaption>Git lifecycle</figcaption>
+</figure>
+
+Image from Daniel Kummer's [slide deck](http://www.slideshare.net/origamiaddict/git-get-ready-to-use-it) on LinkedIn
+
+There are 4 main stages of Git version controlled file:
+
+1. **Untracked**: The file will not be added in the next commit
+2. **Staged**: Staged files have not yet been committed to memory but they are "on deck" so to speak for your next commit
+3. **Unmodified**: The file has already been committed and has not changed since the last commit
+4. **Modified**: You have changes in the file since it was last committed, you will need to stage them again for the changes to be added in the next commit
+
+Once you have committed a file and it becomes "unmodified" then it's contents are saved in Git's memory.
+
+- **Not saved in git memory**: Your file is not saved until you commit the file to Git's memory
+- **Saved in git memory**: Only once you have committed a file, it becomes saved in Git's memory
+
 
 ## Let's use Git
 
@@ -574,6 +539,21 @@ Team up with the person next to you, and go through the following commands we've
 
 Based on what we've talked about, and before you jump into your terminal, discuss the correct commands you would have to use - and the correct order you would need to use them in - to repeat the process of creating a readme. Be aware of the "why" and that you may have to use some commands more than once.
 
+## Branch, Push, Merge, Repeat - Independent Practice
+
+Time for you to try it. With your partner, walk through the steps necessary together, catching each other if either makes any missteps.
+
+Start by mimicking our example – create a branch to write another readme.
+
+- `git init`
+- `git add` & `git commit`
+- Create a new branch for the feature you're about to work on
+- Switch to that branch
+- Write some code
+- `git merge` that branch back into your `master`
+
+Once you've got it down, do the same process again for a bug fix (aka a typo), so you get in the habit of creating branches whenever you need to make changes.
+
 ## Create a pull request on GitHub - Codealong
 
 Before you can open a pull request, you must create a branch in your local repository, commit to it, and push the branch to a repository or fork on GitHub.
@@ -626,7 +606,8 @@ Don't be frustrated by all the new commands because we will definitely have the 
 - How do you merge & delete a branch?
 
 ## Associated Lab
-Refine the skills covered in this workshop with this [lab](https://github.com/den-wdi-1/gh-lab/blob/master/readme.md)
+Refine the skills covered in this workshop with this [lab](https://github.com/den-wdi-2/gh-lab)
+
 
 ## Licensing
 All content is licensed under a CC­BY­NC­SA 4.0 license.

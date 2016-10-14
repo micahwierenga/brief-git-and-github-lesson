@@ -3,7 +3,17 @@ Market: SF
 Adapted for: DEN
 -->
 
+<!-- If you can get through this faster, do so, so students have more time on their website. -->
+
 ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png)
+
+<!--1:30 5 minutes -->
+
+<!-- Hook: Raise your hand if you've ever had a group essay project.  How did you share your essay?
+
+...
+
+One of the big problems with team projects is this exact problem.  How do you know which is the latest version?  What happens if somebody accidentally deletes everything?  What if Jack has been on fire, but he made one change that ruined our essay, and we just want to get rid of that one?  Welcome to version control. -->
 
 # Git and Github
 
@@ -16,15 +26,17 @@ Adapted for: DEN
 ## What are the objectives?
 *After this lesson, students will be able to:*
 
-- Explain basic git commands like init, add, commit, push, pull and clone
-- Create a git repo
-- Keep a local git repo in sync with a remote repo on GitHub
+- **Explain** basic git commands like init, add, commit, push, pull and clone
+- **Create** a git repo
+- **Keep** a local git repo in sync with a remote repo on GitHub
 
 ## Where should we be now?
 *Before this lesson, students should already be able to:*
 
-- Use the command line
-- Use a text editor
+- **Use** the command line
+- **Use** a text editor
+
+<!--1:35 5 minutes -->
 
 ## Git vs GitHub and Version Control
 <details>
@@ -46,6 +58,8 @@ There are two main types of version control:
 - Distributed: Changes can be tracked on individual computers, and synched using the cloud
 - Git and GitHub together form a distributed version control system
 
+<!--CFU: Think-pair share, difference between Git/GitHub and Centralized vs Distributed -->
+
 #### So many commands?!
 
 There are also a lot of commands you can use in git. You can take a look at a list of the available commands by running:
@@ -55,6 +69,9 @@ $ git help -a
 ```
 
 Even though there are lots of commands, in this course we will really only need about 10.
+
+<!-- Catch-up -->
+<!--1:40 20 minutes -->
 
 ## Let's use Git
 
@@ -127,6 +144,8 @@ What is the difference?
 
 This snapshot is now stored in a temporary staging area which Git calls the "index".
 
+![](git-staging-area.png)
+
 #### Commit
 
 To permanently store the contents of the index in the repository, (commit these changes to the HEAD), you need to run:
@@ -182,6 +201,9 @@ Good | Bad
   <figcaption>Maybe just take a break.</figcaption>
 </figure>
 
+<!--2:00 10 minutes -->
+<!--Catch-up -->
+
 #### Make changes to the file
 
 Now let's open file.txt in Sublime:
@@ -226,9 +248,13 @@ If we want to revert the file back and disregard any changes (dangerous!), ~~we 
 $ git reset --hard b4faebd
 ```
 
+<!--2:10 10 minutes -->
+
+### GitHub
+
 #### Making and cloning repositories
 
-Let's do this together:
+<!--Catch-up-->
 
 1. Go to your Github account
 2. In the top left, hit the + button and select `New repository`
@@ -244,6 +270,7 @@ We now need to connect our local Git repo with our remote repository on GitHub. 
 git remote add origin git@github.com:github-name/hello-world.git
 ```
 
+<!--2:20 10 minutes -->
 #### Pushing to Github
 
 In order to send files from our local machine to our remote repository on Github, we need to use the command `git push`. However, you also need to add the name of the remote, in this case we called it `origin` and the name of the branch, in this case `master`.
@@ -270,6 +297,7 @@ git push origin master
 
 Refresh your GitHub webpage, and the files should be there.
 
+<!--2:30 10 minutes -->
 
 #### Cloning
 
@@ -314,6 +342,7 @@ Checking connectivity... done.
 
 You now have cloned your first repository!
 
+<!--2:40 10 minutes -->
 
 ## Forking
 

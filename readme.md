@@ -104,7 +104,7 @@ If we look at the contents of this empty folder using:
 ```bash
 ls -A
 ```
-
+g
 We should see that there is now a hidden folder called `.git` this is where all of the information about your repository is stored. There is no need for you to make any changes to this folder. You can control all the git flow using `git` commands.
 
 #### Add a file
@@ -235,7 +235,7 @@ Checking `git log` will show you 2 commits with different ids:
 * b4faebd Adds file.txt
 ```
 
-We can revert the file back to the first commit using it's specific commit id with:
+We can revert the file back to the first commit using its specific commit id with:
 
 ```bash
 $ git reset --soft b4faebd

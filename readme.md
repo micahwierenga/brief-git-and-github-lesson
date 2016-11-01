@@ -56,6 +56,7 @@ There are two main types of version control:
 
 - Centralized: All changes are kept on a single server
 - Distributed: Changes can be tracked on individual computers, and synched using the cloud
+
 - Git and GitHub together form a distributed version control system
 
 <!--CFU: Think-pair share, difference between Git/GitHub and Centralized vs Distributed -->
@@ -362,6 +363,8 @@ When you want to propose a change to a repository (the original project) that yo
 
 _"I've made some changes to your repository, if you want to include them in your original one then you can pull them from my fork!"_
 
+<!--2:50 5 minutes -->
+
 ## Questions
 
 Use the internet and what you've learned today to answer the following questions with a partner:
@@ -372,7 +375,6 @@ Use the internet and what you've learned today to answer the following questions
 * How do I go back to the previous commit?
 * How do I check the configuration on a specific machine?
 * How does github know that I am allowed to push to a specific repo?
-
 
 ## Licensing
 All content is licensed under a CC­BY­NC­SA 4.0 license.

@@ -5,15 +5,13 @@ Adapted for: DEN
 
 <!-- If you can get through this faster, do so, so students have more time on their website. -->
 
-![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png)
-
 <!--1:30 5 minutes -->
 
-<!-- Hook: Raise your hand if you've ever had a group essay project.  How did you share your essay?
+<!-- Hook: Raise your hand if you've ever had a group essay project. How did you share your essay?
 
 ...
 
-One of the big problems with team projects is this exact problem.  How do you know which is the latest version?  What happens if somebody accidentally deletes everything?  What if Jack has been on fire, but he made one change that ruined our essay, and we just want to get rid of that one?  Welcome to version control. -->
+One of the big problems with team projects is this exact problem.  How do you know which is the latest version? What happens if somebody accidentally deletes everything? What if Jack has been on fire, but he made one change that ruined our essay, and we just want to get rid of that one? Welcome to version control. -->
 
 # Git and Github
 

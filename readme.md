@@ -205,8 +205,6 @@ $ subl file.txt
 
 Inside the file, write something.
 
-If you press `return` in the terminal, you will now see that you have untracked changes.
-
 Running `git status` again will show you that file.txt has been **modified**.
 
 #### Revert to a previous commit
@@ -221,22 +219,31 @@ $ git commit -m "Adds content to file.txt"
 Checking `git log` will show you 2 commits with different ids:
 
 ```bash
-* 6e78569 (HEAD, master) Adds content to file.txt
-* b4faebd Adds file.txt
+commit 141a91b3398e5f458ec9f8c6f2571b22fd5b2463
+Author: [GitHub username] <[GitHub email]>
+Date:   Sun Dec 23 23:43:58 2018 -0700
+
+    Adds content to file.txt
+
+commit 5d5bbac15ab228f1b96015c6031cb8f8a1dfd92d
+Author: [GitHub username] <[GitHub email]>
+Date:   Sun Dec 23 23:28:50 2018 -0700
+
+    Adds file.txt
 ```
 
 We can revert the file back to the first commit using its specific commit id with:
 
 ```bash
-$ git reset --soft b4faebd
+$ git reset --soft 5d5bbac
 ```
 
-This will do a soft reset, where the changes in the file we made are still there - the changes are staged but not committed anymore.
+This will do a soft reset, where the changes in the file we made are still there. The changes are staged but not committed anymore.
 
-If we want to revert the file back and disregard any changes (dangerous!), ~~we can use~~ almost definitely do **not** use:
+If we want to revert the file back and disregard any changes (which is **dangerous**), we can use (but probably should **not**):
 
 ```bash
-$ git reset --hard b4faebd
+$ git reset --hard 5d5bbac
 ```
 
 <!--2:10 10 minutes -->

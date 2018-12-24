@@ -189,7 +189,7 @@ Good | Bad
 "Fixes issue #347" | [commit logs from last night](http://www.commitlogsfromlastnight.com/)
 
 
-![](https://explainxkcd.com/wiki/images/d/de/git_commit.png)
+![](https://imgs.xkcd.com/comics/git_commit_2x.png)
 
 
 <!--2:00 10 minutes -->

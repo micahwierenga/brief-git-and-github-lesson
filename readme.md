@@ -169,7 +169,7 @@ You should see:
 
 ```bash
 commit 5d5bbac15ab228f1b96015c6031cb8f8a1dfd92d
-Author: [GitHub username] <[GitHub email]>
+Author: [GitHub_username] <[GitHub_email]>
 Date:   Sun Dec 23 23:28:50 2018 -0700
 
     Adds file.txt
@@ -220,13 +220,13 @@ Checking `git log` will show you 2 commits with different ids:
 
 ```bash
 commit 141a91b3398e5f458ec9f8c6f2571b22fd5b2463
-Author: [GitHub username] <[GitHub email]>
+Author: [GitHub_username] <[GitHub_email]>
 Date:   Sun Dec 23 23:43:58 2018 -0700
 
     Adds content to file.txt
 
 commit 5d5bbac15ab228f1b96015c6031cb8f8a1dfd92d
-Author: [GitHub username] <[GitHub email]>
+Author: [GitHub_username] <[GitHub_email]>
 Date:   Sun Dec 23 23:28:50 2018 -0700
 
     Adds file.txt
@@ -262,10 +262,10 @@ $ git reset --hard 5d5bbac
 4. **Initialize this repository with a README** (So that we can `git pull`)
 4. Click the big green Create Repository button
 
-We now need to connect our local Git repo with our remote repository on GitHub. We have to add a "remote" repository, an address where we can send our local files to be stored.
+We now need to connect our local Git repo with our remote repository on GitHub. We have to add a **remote** repository, an address where we can send our local files to be stored.
 
 ```bash
-git remote add origin git@github.com:github-name/hello-world.git
+git remote add origin https://github.com/[GitHub_username]/hello-world.git
 ```
 
 <!--2:20 10 minutes -->
@@ -285,6 +285,12 @@ As we added the README.md in our repo, we need to first `pull` that file to our 
 
 ```bash
 git pull origin master
+```
+This will likely fail because we have two different histories: the history of our local repo on our computer and the history of our remote repo on GitHub. So, we'll need to force these histories to merge into one.
+
+
+```bash
+git pull origin master --allow-unrelated-histories
 ```
 
 Once we have done this, you should see the README file on your computer. Now you can push your changes:
@@ -325,17 +331,18 @@ Ensure that you have SSH checked and copy this url.
 To retrieve the contents of their repo, all you need to do is:
 
 ```bash
-$ git clone git@github.com:alexpchin/hello-world.git
+$ git clone https://www.github.com/<github-username>/hello-world.git
 ```
 
 Git should reply:
 
 ```bash
 Cloning into 'hello-world'...
-remote: Counting objects: 3, done.
-remote: Total 3 (delta 0), reused 3 (delta 0), pack-reused 0
-Receiving objects: 100% (3/3), done.
-Checking connectivity... done.
+remote: Enumerating objects: 8, done.
+remote: Counting objects: 100% (8/8), done.
+remote: Compressing objects: 100% (4/4), done.
+remote: Total 8 (delta 0), reused 5 (delta 0), pack-reused 0
+Unpacking objects: 100% (8/8), done.
 ```
 
 You now have cloned your first repository!
@@ -368,10 +375,9 @@ Use the internet and what you've learned today to answer the following questions
 
 * How do I send changes to the staging area?
 * How do I check what is going to be committed?
-* How do I send the commits to Github?
+* How do I send the commits to GitHub?
 * How do I go back to the previous commit?
-* How do I check the configuration on a specific machine?
-* How does github know that I am allowed to push to a specific repo?
+* How does GitHub know that I am allowed to push to a specific repo?
 
 ## Licensing
 All content is licensed under a CC­BY­NC­SA 4.0 license.

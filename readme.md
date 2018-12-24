@@ -13,13 +13,13 @@ Adapted for: DEN
 
 One of the big problems with team projects is this exact problem.  How do you know which is the latest version? What happens if somebody accidentally deletes everything? What if Jack has been on fire, but he made one change that ruined our essay, and we just want to get rid of that one? Welcome to version control. -->
 
-# Git and Github
+# Git and GitHub
 
 ## Why is this important?
 *This workshop is important because:*
 - Local and cloud based version control are **fundamental** tools of **every** developer
-- Git and Github are the most popular version control solution for open-source projects
-- Proficient use of Git and Github allows collaboration on projects from small teams to hundreds or thousands of developers.
+- Git and GitHub are the most popular version control solution for open-source projects
+- Proficient use of Git and GitHub allows collaboration on projects from small teams to hundreds or thousands of developers.
 
 ## What are the objectives?
 *After this lesson, students will be able to:*
@@ -41,7 +41,7 @@ One of the big problems with team projects is this exact problem.  How do you kn
   <summary>What is the difference between Git and GitHub?</summary>
   <p>Git is a software version control tool that works on your local machine. It allows you to `init`, `add`, `commit`, and `fork` project 'repos'. It also has methods `push`, `pull`, and `fetch` which are designed to interact with a git server or cloud based service like GitHub.
   <br>
-  Github is a cloud based git server and social network which uses Git under the hood for its version control system.
+  GitHub is a cloud based git server and social network which uses Git under the hood for its version control system.
   </p>
 </details>
 
@@ -254,7 +254,7 @@ $ git reset --hard 5d5bbac
 
 <!--Catch-up-->
 
-1. Go to your Github account
+1. Go to your GitHub account
 2. In the top left, hit the + button and select `New repository`
 ![](https://help.github.com/assets/images/help/repository/repo-create.png)
 3. Name your repository `hello-world`
@@ -269,9 +269,9 @@ git remote add origin https://github.com/[GitHub_username]/hello-world.git
 ```
 
 <!--2:20 10 minutes -->
-#### Pushing to Github
+#### Pushing to GitHub
 
-In order to send files from our local machine to our remote repository on Github, we need to use the command `git push`. However, you also need to add the name of the remote, in this case we called it `origin` and the name of the branch, in this case `master`.
+In order to send files from our local machine to our remote repository on GitHub, we need to use the command `git push`. However, you also need to add the name of the remote, in this case we called it `origin` and the name of the branch, in this case `master`.
 
 ```bash
 git push origin master
@@ -279,7 +279,7 @@ git push origin master
 
 This should fail due to new files on the remote repo.
 
-#### Pulling from Github
+#### Pulling from GitHub
 
 As we added the README.md in our repo, we need to first `pull` that file to our local repository to check that we haven't got a 'conflict'.
 
@@ -314,7 +314,7 @@ cd ~/Desktop
 rm -rf hello-world
 ```
 
-Now ask the person sitting next to you for their github name and navigate to their repository on github:
+Now ask the person sitting next to you for their GitHub name and navigate to their repository on GitHub:
 
 ```bash
 https://www.github.com/<github-username>/hello-world

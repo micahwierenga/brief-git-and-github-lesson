@@ -102,8 +102,8 @@ If we look at the contents of this empty folder using:
 ```bash
 ls -A
 ```
-g
-We should see that there is now a hidden folder called `.git` this is where all of the information about your repository is stored. There is no need for you to make any changes to this folder. You can control all the git flow using `git` commands.
+
+We should see that there is now a hidden folder called `.git`. This is where all of the information about your repository is stored. There is no need for you to make any changes to this folder. You can control all the git flow using `git` commands.
 
 #### Add a file
 

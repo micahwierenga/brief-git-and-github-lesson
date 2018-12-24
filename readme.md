@@ -168,13 +168,11 @@ git log
 You should see:
 
 ```bash
-* b4faebd (HEAD, master) Adds file.txt
-```
+commit 5d5bbac15ab228f1b96015c6031cb8f8a1dfd92d
+Author: [GitHub username] <[GitHub email]>
+Date:   Sun Dec 23 23:28:50 2018 -0700
 
-To exit this view, you need to press:
-
-```bash
-q
+    Adds file.txt
 ```
 
 #### A good commit message
@@ -190,11 +188,9 @@ Good | Bad
 "Fixes typo"| "stupid f***ing typos"
 "Fixes issue #347" | [commit logs from last night](http://www.commitlogsfromlastnight.com/)
 
-<figure>
-  <img src="https://explainxkcd.com/wiki/images/d/de/git_commit.png" alt="relevant XKCD">
-  <br>
-  <figcaption>Maybe just take a break.</figcaption>
-</figure>
+
+![](https://explainxkcd.com/wiki/images/d/de/git_commit.png)
+
 
 <!--2:00 10 minutes -->
 <!--Catch-up -->

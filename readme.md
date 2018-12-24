@@ -81,6 +81,8 @@ $ cd ~/Desktop
 $ mkdir hello-world
 ```
 
+Go into this directory. **Hint: how do you change directory?**
+
 You can place this directory under Git revision control using the command:
 
 ```bash

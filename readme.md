@@ -113,12 +113,6 @@ Let's create a new file:
 $ touch file.txt
 ```
 
-A small cross should show next to your prompt!
-
-```bash
-git:(master) ✗
-```
-
 If we run `git status` we should get:
 
 ```bash

@@ -62,21 +62,18 @@ There are two main types of version control:
 ![Centralized vs Distributed Version Control Systems](https://www.researchgate.net/profile/Sofia_Feist/publication/316553817/figure/fig2/AS:669480740982806@1536628055836/Centralized-Version-Control-vs-Distributed-Version-Control.ppm)
 
 <!--CFU: Think-pair share, difference between Git/GitHub and Centralized vs Distributed -->
+<!-- Catch-up -->
+<!--1:40 20 minutes -->
 
-#### So many commands?!
+## Let's use Git
 
-There are also a lot of commands you can use in git. You can take a look at a list of the available commands by running:
+As an initial note, there are many commands you can use in git. You can take a look at a list of the available commands by running:
 
 ```bash
 $ git help -a
 ```
 
 Even though there are lots of commands, in this course we will really only need about 10.
-
-<!-- Catch-up -->
-<!--1:40 20 minutes -->
-
-## Let's use Git
 
 First, create a directory on your Desktop:
 
@@ -109,7 +106,7 @@ If we look at the contents of this empty folder using:
 ls -A
 ```
 
-We should see that there is now a hidden folder called `.git`. This is where all of the information about your repository is stored. There is no need for you to make any changes to this folder. You can control all the git flow using `git` commands.
+We should see that there is now a hidden folder called `.git`. This is where all of the information about your repository is stored. Any changes made to this folder will be made through `git` commands.
 
 #### Add a file
 
@@ -134,7 +131,7 @@ Untracked files:
 nothing added to commit but untracked files present (use "git add" to track)
 ```
 
-This means that there is a new **untracked** file. Next, tell Git to take a snapshot of the contents of all files under the current directory (note the .)
+This means that there is a new **untracked** file. Next, tell Git to take a snapshot of the contents of all files under the current directory (note the .).
 
 ```bash
 $ git add . (or git add -A)
@@ -153,7 +150,7 @@ To permanently store the contents of the index in the repository, (commit these 
 $ git commit -m "Adds file.txt"
 ```
 
-You should now get:
+You should now get (the commit number will vary):
 
 ```bash
 [master (root-commit) b4faebd] Adds file.txt
@@ -169,7 +166,7 @@ If we want to view the commit history, we can run:
 git log
 ```
 
-You should see:
+You should see (again, the commit number will vary):
 
 ```bash
 commit 5d5bbac15ab228f1b96015c6031cb8f8a1dfd92d
@@ -178,23 +175,6 @@ Date:   Sun Dec 23 23:28:50 2018 -0700
 
     Adds file.txt
 ```
-
-#### A good commit message
-A good commit message is:
-  - in present tense
-  - describes what the commit contributes
-
-Good | Bad
------|----
-"Adds signup and login" | "Added logout stuff"
-"Creates upvote counter" | "Upvotes!"
-"Fixes merge conflict" | "conflict"
-"Fixes typo"| "stupid f***ing typos"
-"Fixes issue #347" | [commit logs from last night](http://www.commitlogsfromlastnight.com/)
-
-
-![](https://imgs.xkcd.com/comics/git_commit_2x.png)
-
 
 <!--2:00 10 minutes -->
 <!--Catch-up -->
@@ -211,177 +191,12 @@ Inside the file, write something.
 
 Running `git status` again will show you that file.txt has been **modified**.
 
-#### Revert to a previous commit
-
-Let's now make a second commit.
-
-```bash
-$ git add .
-$ git commit -m "Adds content to file.txt"
-```
-
-Checking `git log` will show you 2 commits with different ids:
-
-```bash
-commit 141a91b3398e5f458ec9f8c6f2571b22fd5b2463
-Author: [GitHub_username] <[GitHub_email]>
-Date:   Sun Dec 23 23:43:58 2018 -0700
-
-    Adds content to file.txt
-
-commit 5d5bbac15ab228f1b96015c6031cb8f8a1dfd92d
-Author: [GitHub_username] <[GitHub_email]>
-Date:   Sun Dec 23 23:28:50 2018 -0700
-
-    Adds file.txt
-```
-
-We can revert the file back to the first commit using its specific commit id with:
-
-```bash
-$ git reset --soft 5d5bbac
-```
-
-This will do a soft reset, where the changes in the file we made are still there. The changes are staged but not committed anymore.
-
-If we want to revert the file back and disregard any changes (which is **dangerous**), we can use (but probably should **not**):
-
-```bash
-$ git reset --hard 5d5bbac
-```
-
-<!--2:10 10 minutes -->
-
-### GitHub
-
-#### Making and cloning repositories
-
-<!--Catch-up-->
-
-1. Go to your GitHub account
-2. In the top left, hit the + button and select `New repository`
-![](https://help.github.com/assets/images/help/repository/repo-create.png)
-3. Name your repository `hello-world`
-![](https://help.github.com/assets/images/help/repository/repo-create-name.png)
-4. **Initialize this repository with a README** (So that we can `git pull`)
-4. Click the big green Create Repository button
-
-We now need to connect our local Git repo with our remote repository on GitHub. We have to add a **remote** repository, an address where we can send our local files to be stored.
-
-```bash
-git remote add origin https://github.com/[GitHub_username]/hello-world.git
-```
-
-<!--2:20 10 minutes -->
-#### Pushing to GitHub
-
-In order to send files from our local machine to our remote repository on GitHub, we need to use the command `git push`. However, you also need to add the name of the remote, in this case we called it `origin` and the name of the branch, in this case `master`.
-
-```bash
-git push origin master
-```
-
-This should fail due to new files on the remote repo.
-
-#### Pulling from GitHub
-
-As we added the README.md in our repo, we need to first `pull` that file to our local repository to check that we haven't got a 'conflict'.
-
-```bash
-git pull origin master
-```
-This will likely fail because we have two different histories: the history of our local repo on our computer and the history of our remote repo on GitHub. So, we'll need to force these histories to merge into one.
-
-
-```bash
-git pull origin master --allow-unrelated-histories
-```
-
-Once we have done this, you should see the README file on your computer. Now you can push your changes:
-
-```bash
-git push origin master
-```
-
-Refresh your GitHub webpage, and the files should be there.
-
-<!--2:30 10 minutes -->
-
-#### Cloning
-
-Cloning allows you to get a local copy of a remote repository.
-
-Navigate back to your Desktop and **delete your hello-world repository**:
-
-```bash
-cd ~/Desktop
-rm -rf hello-world
-```
-
-Now ask the person sitting next to you for their GitHub name and navigate to their repository on GitHub:
-
-```bash
-https://www.github.com/<github-username>/hello-world
-```
-
-On the right hand side you will see:
-
-![clone](https://cloud.githubusercontent.com/assets/40461/8228838/dfdc57a0-15a9-11e5-90a7-6c4fa8641ae6.jpg)
-
-Ensure that you have SSH checked and copy this url.
-
-#### Clone their repo!
-
-To retrieve the contents of their repo, all you need to do is:
-
-```bash
-$ git clone https://www.github.com/<github-username>/hello-world.git
-```
-
-Git should reply:
-
-```bash
-Cloning into 'hello-world'...
-remote: Enumerating objects: 8, done.
-remote: Counting objects: 100% (8/8), done.
-remote: Compressing objects: 100% (4/4), done.
-remote: Total 8 (delta 0), reused 5 (delta 0), pack-reused 0
-Unpacking objects: 100% (8/8), done.
-```
-
-You now have cloned your first repository!
-
-<!--2:40 10 minutes -->
-
-## Forking
-
-The `fork` & `pull` model lets anyone fork an existing repository and push changes to their personal fork without requiring access be granted to the source repository.
-
-Most commonly, forks are used to either propose changes to someone else's project or to use someone else's project as a starting point for your own idea.
-
-#### Cloning vs Forking
-
-When you fork a repository, you make a new **remote** repository that is exactly the same as the original, except you are the owner. You can then `clone` your new fork and `push` and `pull` to it without needing any special permissions.
-
-When you clone a repository, unless you have been added as a contributor, you will not be able to push your changes to the original remote repository.
-
-#### Pull requests
-
-When you want to propose a change to a repository (the original project) that you have forked, you can issue a pull request. This basically is you saying:
-
-_"I've made some changes to your repository, if you want to include them in your original one then you can pull them from my fork!"_
-
-<!--2:50 5 minutes -->
-
 ## Questions
 
 Use the internet and what you've learned today to answer the following questions with a partner:
 
 * How do I send changes to the staging area?
 * How do I check what is going to be committed?
-* How do I send the commits to GitHub?
-* How do I go back to the previous commit?
-* How does GitHub know that I am allowed to push to a specific repo?
 
 ## Licensing
 All content is licensed under a CC­BY­NC­SA 4.0 license.

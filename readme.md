@@ -11,6 +11,8 @@ Adapted for: DEN
 
 ...
 
+![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png)
+
 One of the big problems with team projects is this exact problem.  How do you know which is the latest version? What happens if somebody accidentally deletes everything? What if Jack has been on fire, but he made one change that ruined our essay, and we just want to get rid of that one? Welcome to version control. -->
 
 # Git and GitHub

@@ -15,7 +15,7 @@ One of the big problems with team projects is this exact problem.  How do you kn
 
 <img src="https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png">
 
-# Git and GitHub
+# Brief Intro to Git and GitHub
 
 ## Why is this important?
 *This workshop is important because:*
@@ -58,6 +58,8 @@ There are two main types of version control:
 - Distributed: Changes can be tracked on individual computers, and synched using the cloud
 
 - Git and GitHub together form a distributed version control system
+
+![Centralized vs Distributed Version Control Systems](https://www.researchgate.net/profile/Sofia_Feist/publication/316553817/figure/fig2/AS:669480740982806@1536628055836/Centralized-Version-Control-vs-Distributed-Version-Control.ppm)
 
 <!--CFU: Think-pair share, difference between Git/GitHub and Centralized vs Distributed -->
 

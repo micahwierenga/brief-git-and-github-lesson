@@ -11,7 +11,7 @@ Adapted for: DEN
 
 ...
 
-One of the big problems with team projects is this exact problem.  How do you know which is the latest version? What happens if somebody accidentally deletes everything? What if Jack has been on fire, but he made one change that ruined our essay, and we just want to get rid of that one? Welcome to version control. -->
+One of the big problems with team projects is this exact problem. How do you know which is the latest version? What happens if somebody accidentally deletes everything? What if Jack has been on fire, but he made one change that ruined our essay, and we just want to get rid of that one? Welcome to version control. -->
 
 <img src="https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png">
 
@@ -43,7 +43,7 @@ One of the big problems with team projects is this exact problem.  How do you kn
 
 ### What is the difference between Git and GitHub?
 
-- Git is a software version control tool that works on your local machine. It allows you to `init`, `add`, `commit`, and `fork` project 'repos'. It also has methods `push`, `pull`, and `fetch` which are designed to interact with a git server or cloud based service like GitHub.
+- Git is a software version control tool that works on your local machine. It allows you to `init`, `add`, `commit`, and `fork` project repos, or repositories. It also has methods `push`, `pull`, and `fetch` which are designed to interact with a git server or cloud based service like GitHub.
 
 - GitHub is a cloud-based git server and social network which uses Git under the hood for its version control system.
 

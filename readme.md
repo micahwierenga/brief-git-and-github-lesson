@@ -28,7 +28,7 @@ One of the big problems with team projects is this exact problem.  How do you kn
 ## What are the objectives?
 *After this lesson, students will be able to:*
 
-- **Explain** basic git commands like init, add, commit, status, and log.
+- **Explain** basic git commands like init, add, commit, and status.
 - **Create** a local git repo on their computers.
 
 ## Where should we be now?
@@ -175,26 +175,7 @@ You should now get a message like:
  create mode 100644 file.txt
 ```
 
-#### Checking the log
-
-If we want to view the commit history, we can run:
-
-```bash
-git log
-```
-
-You should see something like:
-
-```bash
-commit 5d5bbac15ab228f1b96015c6031cb8f8a1dfd92d
-Author: [GitHub_username] <[GitHub_email]>
-Date:   Sun Dec 23 23:28:50 2018 -0700
-
-    Adds file.txt
-```
-
-<!--2:00 10 minutes -->
-<!--Catch-up -->
+<!-- And now our changes are in our local repo! They are officially backed up and ready to push up to GitHub if we wanted. -->
 
 #### Make changes to the file
 
@@ -204,7 +185,7 @@ Now let's just a little bit of text:
 $ printf "Hello\n" >> file.txt
 ```
 
-(You can run `cat file.txt` to see your new content.)
+(You can run `cat file.txt` to see your new content!)
 
 Running `git status` again will show you that file.txt has been **modified**.
 

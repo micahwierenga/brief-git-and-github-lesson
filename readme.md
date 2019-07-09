@@ -20,8 +20,8 @@ One of the big problems with team projects is this exact problem.  How do you kn
 ## Why is this important?
 *This workshop is important because:*
 - Local- and cloud-based version control are **fundamental** tools of **every** developer.
-- Git and GitHub are the most popular version control solution for open-source projects.
-- Proficient use of Git and GitHub allows collaboration on projects from small teams to hundreds or thousands of developers.
+- Git and GitHub are the most popular **version control solution** for open-source projects.
+- Proficient use of Git and GitHub allows **collaboration** on projects from small teams to hundreds or thousands of developers.
 
 <!-- We won't get too deep into GitHub today, but we should have a better idea of what role it plays in the process. -->
 
@@ -58,8 +58,8 @@ Version control is a kind of software used to track changes to files so that a c
 
 There are two main types of version control:
 
-- *Centralized:* All changes are kept on a single server.
-- *Distributed:* Changes can be tracked on individual computers, and synched using the cloud.
+- **Centralized:** All changes are kept on a single server.
+- **Distributed:** Changes can be tracked on individual computers, and synched using the cloud.
 
 - Git and GitHub together form a distributed version control system.
 
